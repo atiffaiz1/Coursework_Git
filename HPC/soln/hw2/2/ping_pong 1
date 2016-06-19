@@ -1,0 +1,39 @@
+#!/bin/sh
+##SBATCH --partition=debug
+#SBATCH --time=00:15:00
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=1
+##SBATCH --mem=24000
+# Memory per node specification is in MB. It is optional. 
+# The default limit is 3GB per core.
+#SBATCH --job-name="ping_pong"
+#SBATCH --output=ping_pong_internode_tcp.out
+#SBATCH --mail-user=npaliwal@buffalo.edu
+#SBATCH --mail-type=END
+##SBATCH --requeue
+#Specifies that the job will be requeued after a node failure.
+#The default is that the job will not be requeued.
+
+
+echo "SLURM_JOBID="$SLURM_JOBID
+echo "SLURM_JOB_NODELIST"=$SLURM_JOB_NODELIST
+echo "SLURM_NNODES"=$SLURM_NNODES
+echo "SLURMTMPDIR="$SLURMTMPDIR
+
+cd $SLURM_SUBMIT_DIR
+echo "working directory = "$SLURM_SUBMIT_DIR
+
+module load intel/13.0
+module load intel-mpi/4.1.0
+module list
+ulimit -s unlimited
+#
+
+echo "Launch helloworld with srun"
+export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
+export I_MPI_DEBUG=4
+export I_MPI_FABRICS="tcp"
+srun ./mpi_pong
+
+
+echo "All Done!"

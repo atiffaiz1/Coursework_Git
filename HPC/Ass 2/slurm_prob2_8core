@@ -1,0 +1,34 @@
+#!/bin/sh
+#SBATCH --partition=general-compute
+#SBATCH --time=00:15:00
+#SBATCH --job-name="prob2_8Core"
+#SBATCH --output=prob2_8core.out
+#SBATCH --mail-user=m27@buffalo.edu
+#SBATCH --mail-type=ALL
+
+#SBATCH --nodes=1
+
+# ====================================================
+# For 8-core nodes
+# ====================================================
+#SBATCH --constraint=CPU-L5520|CPU-L5630
+#SBATCH --mem=24000
+#SBATCH --tasks-per-node=8
+
+tic=`date +%s`
+echo "Start Time = "`date`
+
+echo "SLURM job ID         = "$SLURM_JOB_ID
+echo "Working Dir          = "`pwd`
+echo "Compute Node         = "`hostname`
+
+
+lstopo --of pdf 8core_topology
+
+echo "All Done!"
+
+echo "End Time = "`date`
+toc=`date +%s`
+
+elapsedTime=`expr $toc - $tic`
+echo "Elapsed Time = $elapsedTime seconds"

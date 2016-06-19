@@ -1,0 +1,28 @@
+SLURM_JOBID=741205
+SLURM_JOB_NODELIST=d09n09s02
+SLURM_NNODES=1
+SLURMTMPDIR=/scratch/741205
+working directory = /ifs/user/npaliwal/hw4
+Currently Loaded Modulefiles:
+  1) null              4) intel-mpi/4.1.1   7) intel/13.0
+  2) modules           5) matlab/R2013a     8) intel-mpi/4.1.0
+  3) intel/13.1        6) starccm/7.06
+Launch helloworld with srun
+          10          10         111  0.000000000000000E+000
+          50          50        2487  9.998999999999999E-003
+         100         100        8763  0.123982000000000     
+         250         250       43917   4.94624800000000     
+         500         500      141510   58.8520540000000     
+         750         750      273691   265.980566000000     
+        1000        1000      430896   1279.54447900000     
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+slurmd[d09n09s02]: *** JOB 741205 CANCELLED AT 2013-11-05T18:38:19 DUE TO TIME LIMIT ***
+slurmd[d09n09s02]: *** STEP 741205.0 CANCELLED AT 2013-11-05T18:38:19 DUE TO TIME LIMIT ***
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+jacobi             0000000000404120  Unknown               Unknown  Unknown
+jacobi             000000000040308C  Unknown               Unknown  Unknown
+libc.so.6          0000003C47E1ECDD  Unknown               Unknown  Unknown
+jacobi             0000000000402F89  Unknown               Unknown  Unknown
+srun: error: d09n09s02: task 0: Exited with exit code 1
+All Done!

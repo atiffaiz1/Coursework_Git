@@ -1,0 +1,76 @@
+SLURM_JOBID=498682
+SLURM_JOB_NODELIST=d07n05s02,d07n06s02
+SLURM_NNODES=2
+SLURMTMPDIR=/scratch/498682
+working directory = /ifs/user/npaliwal/hw2-2
+Currently Loaded Modulefiles:
+  1) null              3) intel/13.1        5) intel/13.0
+  2) modules           4) intel-mpi/4.1.1   6) intel-mpi/4.1.0
+Launch helloworld with srun
+Hello from 0 of 2
+Timer accuracy of ~0.953674 usecs
+
+       8 bytes took        54 usec (   0.297 MB/sec)
+      16 bytes took         7 usec (   4.474 MB/sec)
+Hello from 1 of 2
+      32 bytes took       509 usec (   0.126 MB/sec)
+      64 bytes took        10 usec (  13.094 MB/sec)
+     128 bytes took        13 usec (  19.523 MB/sec)
+     256 bytes took        36 usec (  14.222 MB/sec)
+     512 bytes took        10 usec ( 102.261 MB/sec)
+    1024 bytes took        11 usec ( 186.738 MB/sec)
+    2048 bytes took        15 usec ( 272.696 MB/sec)
+    4096 bytes took        33 usec ( 248.984 MB/sec)
+    8192 bytes took        22 usec ( 746.951 MB/sec)
+   16384 bytes took        31 usec (1057.223 MB/sec)
+   32768 bytes took       243 usec ( 269.753 MB/sec)
+   65536 bytes took       314 usec ( 417.430 MB/sec)
+  131072 bytes took       301 usec ( 870.556 MB/sec)
+  262144 bytes took       422 usec (1242.386 MB/sec)
+  524288 bytes took       640 usec (1638.616 MB/sec)
+ 1048576 bytes took      1106 usec (1896.527 MB/sec)
+
+  Asynchronous ping-pong
+
+       8 bytes took        21 usec (   0.763 MB/sec)
+      16 bytes took         7 usec (   4.474 MB/sec)
+      32 bytes took        11 usec (   5.836 MB/sec)
+      64 bytes took         7 usec (  17.896 MB/sec)
+     128 bytes took        12 usec (  21.054 MB/sec)
+     256 bytes took        11 usec (  46.684 MB/sec)
+     512 bytes took        13 usec (  79.536 MB/sec)
+    1024 bytes took        14 usec ( 145.592 MB/sec)
+    2048 bytes took        17 usec ( 241.970 MB/sec)
+    4096 bytes took        21 usec ( 390.452 MB/sec)
+    8192 bytes took        42 usec ( 390.452 MB/sec)
+   16384 bytes took        38 usec ( 864.396 MB/sec)
+   32768 bytes took        55 usec (1189.948 MB/sec)
+   65536 bytes took        78 usec (1681.210 MB/sec)
+  131072 bytes took       134 usec (1956.426 MB/sec)
+  262144 bytes took       240 usec (2183.737 MB/sec)
+  524288 bytes took       462 usec (2269.374 MB/sec)
+ 1048576 bytes took       828 usec (2532.707 MB/sec)
+
+  Bi-directional asynchronous ping-pong
+
+       8 bytes took         7 usec (   2.237 MB/sec)
+      16 bytes took         6 usec (   5.162 MB/sec)
+      32 bytes took         9 usec (   7.064 MB/sec)
+      64 bytes took        25 usec (   5.113 MB/sec)
+     128 bytes took         9 usec (  28.256 MB/sec)
+     256 bytes took        10 usec (  51.131 MB/sec)
+     512 bytes took        10 usec ( 102.261 MB/sec)
+    1024 bytes took        16 usec ( 128.208 MB/sec)
+    2048 bytes took        16 usec ( 256.416 MB/sec)
+    4096 bytes took        18 usec ( 458.130 MB/sec)
+    8192 bytes took        28 usec ( 582.368 MB/sec)
+   16384 bytes took        55 usec ( 594.974 MB/sec)
+   32768 bytes took       147 usec ( 446.230 MB/sec)
+   65536 bytes took       120 usec (1092.954 MB/sec)
+  131072 bytes took       209 usec (1255.150 MB/sec)
+  262144 bytes took       406 usec (1291.264 MB/sec)
+  524288 bytes took       753 usec (1392.227 MB/sec)
+ 1048576 bytes took      1080 usec (1941.742 MB/sec)
+
+ Max rate = 2532.707464 MB/sec  Min latency = 3.099442 usec
+All Done!

@@ -1,0 +1,6 @@
+SLURM_JOBID=436823
+SLURM_JOB_NODELIST=k07n28
+SLURM_NNODES=1
+SLURMTMPDIR=/scratch/436823
+working directory = /ifs/user/npaliwal/hw1
+All Done!

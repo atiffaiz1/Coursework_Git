@@ -1,0 +1,86 @@
+SLURM_JOBID=498689
+SLURM_JOB_NODELIST=d07n05s02,d07n06s02
+SLURM_NNODES=2
+SLURMTMPDIR=/scratch/498689
+working directory = /ifs/user/npaliwal/hw2-2
+Currently Loaded Modulefiles:
+  1) null              3) intel/13.1        5) intel/13.0
+  2) modules           4) intel-mpi/4.1.1   6) intel-mpi/4.1.0
+Launch helloworld with srun
+[-1] MPI startup(): Imported environment partly inaccesible. Map=0 Info=15557f0
+[-1] MPI startup(): Imported environment partly inaccesible. Map=0 Info=6597f0
+[0] MPI startup(): tcp data transfer mode
+[0] MPI startup(): Rank    Pid      Node name  Pin cpu
+
+[0] MPI startup(): 0       29007    d07n05s02  +1
+
+[0] MPI startup(): 1       23275    d07n06s02  +1
+
+Hello from 0 of 2
+Timer accuracy of ~0.953674 usecs
+
+       8 bytes took       135 usec (   0.119 MB/sec)
+      16 bytes took       149 usec (   0.215 MB/sec)
+      32 bytes took       100 usec (   0.639 MB/sec)
+      64 bytes took        52 usec (   2.463 MB/sec)
+     128 bytes took       120 usec (   2.130 MB/sec)
+     256 bytes took       144 usec (   3.555 MB/sec)
+     512 bytes took       124 usec (   8.260 MB/sec)
+    1024 bytes took       157 usec (  13.035 MB/sec)
+    2048 bytes took       225 usec (  18.218 MB/sec)
+    4096 bytes took       316 usec (  25.932 MB/sec)
+    8192 bytes took       658 usec (  24.898 MB/sec)
+   16384 bytes took       987 usec (  33.198 MB/sec)
+   32768 bytes took      1017 usec (  64.435 MB/sec)
+   65536 bytes took      2329 usec (  56.276 MB/sec)
+  131072 bytes took      2901 usec (  90.368 MB/sec)
+  262144 bytes took      4735 usec ( 110.726 MB/sec)
+  524288 bytes took      9894 usec ( 105.980 MB/sec)
+[1] MPI startup(): tcp data transfer mode
+Hello from 1 of 2
+ 1048576 bytes took     18422 usec ( 113.840 MB/sec)
+
+  Asynchronous ping-pong
+
+       8 bytes took       267 usec (   0.060 MB/sec)
+      16 bytes took        94 usec (   0.341 MB/sec)
+      32 bytes took       105 usec (   0.609 MB/sec)
+      64 bytes took        87 usec (   1.475 MB/sec)
+     128 bytes took       102 usec (   2.509 MB/sec)
+     256 bytes took       101 usec (   5.077 MB/sec)
+     512 bytes took       109 usec (   9.378 MB/sec)
+    1024 bytes took       105 usec (  19.478 MB/sec)
+    2048 bytes took       147 usec (  27.889 MB/sec)
+    4096 bytes took       843 usec (   9.717 MB/sec)
+    8192 bytes took       644 usec (  25.442 MB/sec)
+   16384 bytes took       761 usec (  43.057 MB/sec)
+   32768 bytes took      1082 usec (  60.572 MB/sec)
+   65536 bytes took      1782 usec (  73.546 MB/sec)
+  131072 bytes took      2850 usec (  91.986 MB/sec)
+  262144 bytes took      5230 usec ( 100.247 MB/sec)
+  524288 bytes took      9813 usec ( 106.858 MB/sec)
+ 1048576 bytes took     18593 usec ( 112.792 MB/sec)
+
+  Bi-directional asynchronous ping-pong
+
+       8 bytes took        90 usec (   0.178 MB/sec)
+      16 bytes took        92 usec (   0.348 MB/sec)
+      32 bytes took       130 usec (   0.493 MB/sec)
+      64 bytes took       121 usec (   1.059 MB/sec)
+     128 bytes took       120 usec (   2.135 MB/sec)
+     256 bytes took       242 usec (   2.116 MB/sec)
+     512 bytes took       149 usec (   6.872 MB/sec)
+    1024 bytes took       157 usec (  13.055 MB/sec)
+    2048 bytes took       170 usec (  24.095 MB/sec)
+    4096 bytes took       320 usec (  25.584 MB/sec)
+    8192 bytes took       585 usec (  28.003 MB/sec)
+   16384 bytes took      1047 usec (  31.300 MB/sec)
+   32768 bytes took      1338 usec (  48.980 MB/sec)
+   65536 bytes took      1926 usec (  68.056 MB/sec)
+  131072 bytes took      2657 usec (  98.664 MB/sec)
+  262144 bytes took      4973 usec ( 105.428 MB/sec)
+  524288 bytes took      9883 usec ( 106.100 MB/sec)
+ 1048576 bytes took     18805 usec ( 111.521 MB/sec)
+
+ Max rate = 113.840230 MB/sec  Min latency = 25.987625 usec
+All Done!

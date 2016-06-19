@@ -1,0 +1,2 @@
+plotfunc3d(sin(pi*x)*exp(-pi*y),x=0..1,y=0..1)
+plot(plot::Function3d(sin(pi*x)*exp(-pi*y),x=0..1,y=0..1))

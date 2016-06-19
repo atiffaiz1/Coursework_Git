@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --exclusive
+#SBATCH --constraint=CPU-L5520
+#SBATCH --partition=debug
+#SBATCH --time=01:00:00
+#SBATCH --mail-type=END
+##SBATCH --mail-user=
+#SBATCH --output=slurmNPB.out
+#SBATCH --job-name=npb-test
+#
+# Note the above directives can be commented out using an
+# additional "#" (as in the debug queue line above)
+#
+module load intel/15.0 intel-mpi
+#
+NPROCS=`srun -l hostname -s | wc -l`
+export | grep SLURM
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export KMP_AFFINITY=verbose,compact
+export I_MPI_DEBUG=4
+export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
+# may also be useful to pin by socket or core
+export I_MPI_PIN_DOMAIN=node
+export | grep I_MPI
+# NPB uses fixed mpi process count at compile time
+srun bin/bt-mz.C.$NPROCS
